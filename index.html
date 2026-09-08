@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>melementi — mel</title>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%2305010a'/%3E%3Ctext%20x='16'%20y='24'%20font-size='23'%20font-family='Arial,sans-serif'%20font-weight='700'%20text-anchor='middle'%20fill='%23ff2fb0'%3Em%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%2305010a'/%3E%3Ctext%20x='16'%20y='24'%20font-size='23'%20font-family='Arial,sans-serif'%20font-weight='700'%20text-anchor='middle'%20fill='%23ff2fb0'%3Em%3C/text%3E%3C/svg%3E">
+  <meta name="description"
+    content="hey, i'm mel. 22, from london ontario. i build sites, apps, game servers, ai agents and more, affordably. this is me.">
+  <meta property="og:title" content="melementi">
+  <meta property="og:description" content="hey, i'm mel. whatever you need built, i can probably help.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#05010a">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/spacegrotesk-var-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/pacifico-400-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/chakrapetch-700-latin.woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Chakra Petch';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(assets/fonts/chakrapetch-500-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Chakra Petch';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(assets/fonts/chakrapetch-500-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Chakra Petch';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(assets/fonts/chakrapetch-600-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Chakra Petch';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(assets/fonts/chakrapetch-600-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Chakra Petch';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(assets/fonts/chakrapetch-700-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Chakra Petch';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(assets/fonts/chakrapetch-700-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Pacifico';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(assets/fonts/pacifico-400-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Pacifico';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(assets/fonts/pacifico-400-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url(assets/fonts/spacegrotesk-var-latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url(assets/fonts/spacegrotesk-var-latin-ext.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      background: #05010a;
+      color: #f3e9ff;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #ff5cc8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #2fd4ff;
+    }
+
+    ::selection {
+      background: #ff2fb0;
+      color: #05010a;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* transform, not background-position: the compositor can run this off the main thread */
+    @keyframes gridMove {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(44px);
+      }
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: .35;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes eqBar {
+
+      0%,
+      100% {
+        transform: scaleY(.28);
+      }
+
+      50% {
+        transform: scaleY(1);
+      }
+    }
+
+    @keyframes scrollArrow {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+
+      40% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(12px);
+        opacity: 0;
+      }
+    }
+
+    /* opacity, not text-shadow: the bright copy lives in #logo-glow and cross-fades on the compositor */
+    @keyframes logoGlow {
+
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes starsDrift {
+      to {
+        transform: translateY(540px);
+      }
+    }
+
+    @keyframes sunDrift {
+      to {
+        transform: translate(-50%, 270px);
+      }
+    }
+
+    /* Where supported, the hero parallax runs on the compositor off a scroll timeline.
+     The JS fallback below is skipped entirely when this applies. */
+    @supports (animation-timeline: scroll()) {
+      @media (prefers-reduced-motion: no-preference) {
+
+        /* !important is required: #stars and #sun carry their base animation in an
+         inline style attribute, which would otherwise win over this rule */
+        #stars {
+          animation: twinkle 4s ease-in-out infinite, starsDrift linear both !important;
+          animation-timeline: auto, scroll(root block) !important;
+          animation-range: normal, 0 3000px !important;
+        }
+
+        #sun {
+          animation: sunDrift linear both !important;
+          animation-timeline: scroll(root block) !important;
+          animation-range: 0 3000px !important;
+        }
+      }
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        row-gap: 12px;
+      }
+
+      nav>div {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #hero-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        justify-items: center;
+        text-align: center;
+      }
+
+      #hero-grid p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #hero-grid>div:first-child>div {
+        justify-content: center;
+      }
+
+      /* mobile-only: drop the two nav links the hero buttons already cover */
+      nav a[href="#about"],
+      nav a[href="#contact"] {
+        display: none;
+      }
+
+      /* mobile-only: contact cards stack at one uniform width */
+      #contact-cards>* {
+        width: 100%;
+        min-width: 0;
+      }
+
+      /* mobile-only: no scroll cue — touch users already know to scroll */
+      /* !important: the cue carries display:flex in an inline style attribute */
+      #scroll-cue {
+        display: none !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+  <style>
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes ticker { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { [data-ticker] { animation: none !important; } }
+  @supports (animation-timeline: scroll()) { #scroll-progress { animation: progressGrow linear both; animation-timeline: scroll(root); } }
+  @keyframes progressGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  </style>
+</head>
+
+<body>
+  <div id="root" style="position: relative; width: 100%;">
+  <div aria-hidden="true" id="scroll-progress" style="position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, #ff2fb0, #a06bff, #2fd4ff); box-shadow: 0 0 12px rgba(255,47,176,.6);"></div>
+
+    <div
+      style="position: fixed; inset: 0; pointer-events: none; z-index: 54; opacity: .06; background-image: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 3px);">
+    </div>
+
+    <!-- ============ NAV ============ -->
+    <nav
+      style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px clamp(18px, 4vw, 56px); backdrop-filter: blur(14px); background: linear-gradient(180deg, rgba(5,1,10,.85), rgba(5,1,10,.35)); border-bottom: 1px solid rgba(255,47,176,.14);">
+      <a href="index.html#top"
+        style="display: inline-flex; align-items: baseline; gap: 8px; font-family: 'Pacifico', cursive; font-size: 26px; color: #ff5cc8; text-shadow: 0 0 14px rgba(255,47,176,.7), 0 0 34px rgba(122,47,242,.5);"><span
+          style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: .04em;">Mel,</span>melementi</a>
+      <div style="display: flex; align-items: center; gap: clamp(10px, 2vw, 26px);">
+        <a href="index.html#services" data-hover="color: #f3e9ff;"
+          style="font-family: 'Chakra Petch', sans-serif; font-size: 14px; letter-spacing: .12em; text-transform: lowercase; color: #b9a6d6;">services
+          and products</a>
+        <a href="index.html#about" data-hover="color: #f3e9ff;"
+          style="font-family: 'Chakra Petch', sans-serif; font-size: 14px; letter-spacing: .12em; text-transform: lowercase; color: #b9a6d6;">about
+          me</a>
+        <a href="index.html#contact" data-hover="color: #f3e9ff;"
+          style="font-family: 'Chakra Petch', sans-serif; font-size: 14px; letter-spacing: .12em; text-transform: lowercase; color: #b9a6d6;">contact
+          me</a>
+        <div style="display: flex; align-items: center; gap: 8px; margin-left: 4px;">
+          <a href="https://instagram.com/melementi1" target="_blank" rel="noopener" aria-label="Instagram"
+            data-hover="border-color: #2fd4ff; color: #2fd4ff; box-shadow: 0 0 16px rgba(47,212,255,.5);"
+            style="width: 34px; height: 34px; display: grid; place-items: center; border-radius: 9px; border: 1.5px solid rgba(255,92,200,.9); background: rgba(255,92,200,.14); color: #ff8ed8; transition: all .25s ease;"><svg
+              width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38A5.87 5.87 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.87 5.87 0 0 0 2.12-1.38 5.87 5.87 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.87 5.87 0 0 0-1.38-2.12A5.87 5.87 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88">
+              </path>
+            </svg></a>
+          <button type="button" title="discord: melementi (click to copy)" aria-label="Copy Discord username"
+            data-copy="melementi"
+            data-hover="border-color: #2fd4ff; color: #2fd4ff; box-shadow: 0 0 16px rgba(47,212,255,.5);"
+            style="width: 34px; height: 34px; display: grid; place-items: center; border-radius: 9px; border: 1.5px solid rgba(160,107,255,.9); background: rgba(122,47,242,.18); color: #c4a3ff; cursor: pointer; transition: all .25s ease;"><svg
+              width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z">
+              </path>
+            </svg></button>
+          <a href="mailto:contact@melementi.com" aria-label="Email"
+            data-hover="border-color: #ff2fb0; color: #ff2fb0; box-shadow: 0 0 16px rgba(255,47,176,.5);"
+            style="width: 34px; height: 34px; display: grid; place-items: center; border-radius: 9px; border: 1.5px solid rgba(47,212,255,.9); background: rgba(47,212,255,.14); color: #7fe4ff; transition: all .25s ease;"><svg
+              width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m2 7 10 6 10-6"></path>
+            </svg></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <header id="top"
+      style="position: relative; min-height: 92vh; display: flex; flex-direction: column; justify-content: center; padding: 40px 0 32px; overflow: hidden;">
+      <div id="stars"
+        style="position: absolute; inset: -10% 0 40% 0; z-index: 0; background-image: radial-gradient(1.5px 1.5px at 12% 20%, #fff, transparent), radial-gradient(1.5px 1.5px at 28% 42%, #ff9ee0, transparent), radial-gradient(1px 1px at 45% 12%, #fff, transparent), radial-gradient(2px 2px at 62% 30%, #a06bff, transparent), radial-gradient(1px 1px at 78% 18%, #fff, transparent), radial-gradient(1.5px 1.5px at 88% 46%, #2fd4ff, transparent), radial-gradient(1px 1px at 8% 60%, #fff, transparent), radial-gradient(1.5px 1.5px at 52% 62%, #ff5cc8, transparent), radial-gradient(1px 1px at 34% 74%, #fff, transparent), radial-gradient(2px 2px at 70% 68%, #fff, transparent), radial-gradient(1px 1px at 20% 34%, #fff, transparent), radial-gradient(1.5px 1.5px at 5% 14%, #ff9ee0, transparent), radial-gradient(1px 1px at 38% 26%, #fff, transparent), radial-gradient(1.5px 1.5px at 72% 8%, #a06bff, transparent), radial-gradient(1px 1px at 92% 24%, #fff, transparent), radial-gradient(2px 2px at 48% 8%, #2fd4ff, transparent), radial-gradient(1px 1px at 15% 48%, #fff, transparent), radial-gradient(1.5px 1.5px at 60% 50%, #ff5cc8, transparent), radial-gradient(1px 1px at 82% 62%, #fff, transparent), radial-gradient(1px 1px at 26% 56%, #a06bff, transparent), radial-gradient(1.5px 1.5px at 96% 70%, #fff, transparent), radial-gradient(1px 1px at 44% 72%, #ff9ee0, transparent); animation: twinkle 4s ease-in-out infinite;">
+      </div>
+      <div id="sun"
+        style="position: absolute; left: 50%; bottom: 34%; transform: translateX(-50%); width: min(60vw, 520px); height: min(60vw, 520px); border-radius: 50%; z-index: 1; background: linear-gradient(180deg, #ffd0ec 0%, #ff5cc8 34%, #ff2fb0 60%, #7a2ff2 100%); -webkit-mask-image: linear-gradient(180deg, #000 0 55%, transparent 55%), repeating-linear-gradient(180deg, #000 0 8px, transparent 8px 15px); -webkit-mask-composite: source-over; mask-image: linear-gradient(180deg, #000 0 55%, transparent 55%), repeating-linear-gradient(180deg, #000 0 8px, transparent 8px 15px); opacity: .5;">
+      </div>
+      <div
+        style="position: absolute; left: 0; right: 0; bottom: 34%; height: 2px; z-index: 2; background: linear-gradient(90deg, transparent, #ff5cc8 30%, #2fd4ff 70%, transparent); box-shadow: 0 0 40px 8px rgba(255,92,200,.6);">
+      </div>
+      <div
+        style="position: absolute; left: -20%; right: -20%; bottom: 0; height: 34%; z-index: 2; perspective: 320px; perspective-origin: 50% 0%;">
+        <div id="grid"
+          style="position: absolute; inset: -20% 0 -60% 0; transform: rotateX(74deg); transform-origin: 50% 0%; -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%); mask-image: linear-gradient(180deg, transparent, #000 30%);">
+          <div id="grid-lines"
+            style="position: absolute; left: 0; right: 0; top: -44px; bottom: 0; background-image: linear-gradient(rgba(255,47,176,.55) 2px, transparent 2px), linear-gradient(90deg, rgba(122,47,242,.5) 2px, transparent 2px); background-size: 100% 44px, 44px 100%; animation: gridMove 2.6s linear infinite;">
+          </div>
+        </div>
+      </div>
+      <div
+        style="position: absolute; inset: 0; z-index: 3; background: linear-gradient(180deg, rgba(5,1,10,.2) 0%, transparent 30%, transparent 66%, rgba(5,1,10,.6) 100%); pointer-events: none;">
+      </div>
+
+      <div id="hero-grid"
+        style="position: relative; z-index: 5; display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); gap: clamp(24px, 4vw, 64px); align-items: center; max-width: 1180px; margin: 0 auto; width: 100%; padding: 0 clamp(18px, 5vw, 72px); box-sizing: border-box;">
+        <div>
+          <h1
+            style="position: relative; font-family: 'Pacifico', cursive; font-weight: 400; font-size: clamp(56px, 11vw, 128px); line-height: .92; margin: 0 0 8px; color: #ff5cc8; -webkit-text-stroke: 5px #000000; paint-order: stroke fill; text-shadow: 0 0 8px rgba(255,92,200,.9), 0 0 24px rgba(255,47,176,.7), 0 0 48px rgba(122,47,242,.55);">
+            melementi<span id="logo-glow" aria-hidden="true"
+              style="position: absolute; left: 0; right: 0; top: 0; text-align: inherit; text-shadow: 0 0 14px rgba(255,92,200,1), 0 0 40px rgba(255,47,176,.85), 0 0 80px rgba(122,47,242,.7); pointer-events: none; opacity: 0; animation: logoGlow 4s ease-in-out infinite;">melementi</span>
+          </h1>
+          <p
+            style="max-width: 46ch; font-size: clamp(17px, 2vw, 21px); line-height: 1.65; color: #ece1ff; text-wrap: pretty; margin: 0 0 30px; text-shadow: 0 0 14px rgba(160,107,255,.55); -webkit-text-stroke: 1px #05010a; paint-order: stroke fill;">
+            hey, i'm mel, short for melementi. 22, and an enthusiast of tech, music, and everything the internet has
+            to offer.<br>this is me, and whatever you need built, i can probably help.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+            <a href="index.html#services"
+              data-hover="transform: translateY(-3px); box-shadow: 0 10px 40px -6px rgba(255,47,176,.9);"
+              style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; letter-spacing: .06em; padding: 14px 26px; border-radius: 12px; color: #05010a; background: linear-gradient(120deg, #ff5cc8, #ff2fb0); box-shadow: 0 0 30px -6px rgba(255,47,176,.8); transition: all .3s ease; font-size: 18px;">services/products</a>
+            <a href="index.html#about"
+              data-hover="border-color: #2fd4ff; color: #2fd4ff; box-shadow: 0 0 24px -6px rgba(47,212,255,.7);"
+              style="font-family: 'Chakra Petch', sans-serif; font-weight: 600; letter-spacing: .06em; padding: 14px 26px; border-radius: 12px; color: #f3e9ff; border: 1px solid rgba(160,107,255,.55); background: rgba(122,47,242,.08); transition: all .3s ease; font-size: 18px;">about
+              me</a>
+          </div>
+          <div style="display: flex; gap: 12px; margin-top: 18px;">
+            <a href="https://instagram.com/melementi1" target="_blank" rel="noopener" aria-label="Instagram"
+              data-hover="border-color: #2fd4ff; color: #2fd4ff; box-shadow: 0 0 18px rgba(47,212,255,.5); transform: translateY(-3px);"
+              style="width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; border: 1.5px solid rgba(255,92,200,.9); background: rgba(255,92,200,.14); color: #ff8ed8; transition: all .25s ease;"><svg
+                width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38A5.87 5.87 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.87 5.87 0 0 0 2.12-1.38 5.87 5.87 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.87 5.87 0 0 0-1.38-2.12A5.87 5.87 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88">
+                </path>
+              </svg></a>
+            <button type="button" title="discord: melementi (click to copy)" aria-label="Copy Discord username"
+              data-copy="melementi"
+              data-hover="border-color: #2fd4ff; color: #2fd4ff; box-shadow: 0 0 18px rgba(47,212,255,.5); transform: translateY(-3px);"
+              style="width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; border: 1.5px solid rgba(160,107,255,.9); background: rgba(122,47,242,.18); color: #c4a3ff; cursor: pointer; transition: all .25s ease;"><svg
+                width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z">
+                </path>
+              </svg></button>
+            <a href="mailto:contact@melementi.com" aria-label="Email"
+              data-hover="border-color: #ff2fb0; color: #ff2fb0; box-shadow: 0 0 18px rgba(255,47,176,.5); transform: translateY(-3px);"
+              style="width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; border: 1.5px solid rgba(47,212,255,.9); background: rgba(47,212,255,.14); color: #7fe4ff; transition: all .25s ease;"><svg
+                width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m2 7 10 6 10-6"></path>
+              </svg></a>
+          </div>
+        </div>
+        <div style="position: relative; justify-self: center;">
+          <div
+            style="position: absolute; inset: -14px; border-radius: 22px; background: linear-gradient(140deg, #ff2fb0, #7a2ff2, #2fd4ff); filter: blur(26px); opacity: .55; z-index: 0;">
+          </div>
+          <div
+            style="position: relative; z-index: 1; width: clamp(220px, 30vw, 320px); aspect-ratio: 3/4; border-radius: 18px; border: 1px solid rgba(255,92,200,.5); overflow: hidden; background-color: #12071f; background-image: repeating-linear-gradient(48deg, #1c0a33 0 12px, #150826 12px 24px);">
+            <img src="assets/mel-hero.webp" alt="mel" fetchpriority="high" decoding="async"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+      <div id="scroll-cue"
+        style="position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <span
+          style="font-family: 'Chakra Petch', sans-serif; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #b9a6d6;">scroll</span>
+        <div
+          style="width: 22px; height: 34px; border-radius: 12px; border: 1px solid rgba(255,92,200,.7); position: relative;">
+          <div
+            style="position: absolute; left: 50%; top: 7px; margin-left: -2px; width: 4px; height: 8px; border-radius: 2px; background: #ff2fb0; animation: scrollArrow 1.8s ease-in-out infinite;">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+    <!-- dissolve between hero and about -->
+    <div aria-hidden="true"
+      style="position: relative; height: 220px; margin-bottom: -160px; z-index: 4; pointer-events: none; overflow: hidden;">
+      <div
+        style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,92,200,.16) 0 1px, transparent 1px 4px); -webkit-mask-image: linear-gradient(180deg, #000, transparent 88%); mask-image: linear-gradient(180deg, #000, transparent 88%);">
+      </div>
+      <div
+        style="position: absolute; inset: 0; background-image: radial-gradient(1.5px 1.5px at 18% 22%, #fff, transparent), radial-gradient(1.5px 1.5px at 42% 40%, #ff9ee0, transparent), radial-gradient(1px 1px at 66% 18%, #fff, transparent), radial-gradient(2px 2px at 80% 52%, #a06bff, transparent), radial-gradient(1px 1px at 30% 62%, #2fd4ff, transparent), radial-gradient(1.5px 1.5px at 55% 70%, #fff, transparent); -webkit-mask-image: linear-gradient(180deg, #000, transparent 70%); mask-image: linear-gradient(180deg, #000, transparent 70%); animation: twinkle 4s ease-in-out infinite;">
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about"
+      style="position: relative; z-index: 5; padding: clamp(24px, 3vw, 48px) clamp(18px, 5vw, 72px) clamp(70px, 10vw, 130px); max-width: 1180px; margin: 0 auto;">
+      <div aria-hidden="true"
+        style="position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: radial-gradient(1.5px 1.5px at 8% 12%, #fff, transparent), radial-gradient(1px 1px at 22% 30%, #ff9ee0, transparent), radial-gradient(1.5px 1.5px at 40% 8%, #a06bff, transparent), radial-gradient(1px 1px at 58% 22%, #fff, transparent), radial-gradient(2px 2px at 76% 14%, #2fd4ff, transparent), radial-gradient(1px 1px at 90% 34%, #fff, transparent), radial-gradient(1.5px 1.5px at 14% 48%, #ff5cc8, transparent), radial-gradient(1px 1px at 34% 60%, #fff, transparent), radial-gradient(1.5px 1.5px at 52% 74%, #a06bff, transparent), radial-gradient(1px 1px at 68% 54%, #fff, transparent), radial-gradient(2px 2px at 84% 68%, #ff9ee0, transparent), radial-gradient(1px 1px at 96% 88%, #fff, transparent), radial-gradient(1.5px 1.5px at 10% 82%, #2fd4ff, transparent), radial-gradient(1px 1px at 28% 92%, #fff, transparent), radial-gradient(1px 1px at 46% 40%, #fff, transparent), radial-gradient(1.5px 1.5px at 62% 90%, #ff5cc8, transparent); opacity: .5; animation: twinkle 5s ease-in-out infinite;">
+      </div>
+      <div style="position: relative; z-index: 1; text-align: center;">
+        <h2
+          style="font-family: 'Chakra Petch', sans-serif; font-weight: 400; letter-spacing: .32em; text-transform: uppercase; color: #ff2fb0; margin: 0 0 22px; font-size: clamp(30px, 6vw, 54px); text-shadow: 0 0 10px rgba(255,47,176,.8), 0 0 30px rgba(255,47,176,.5), 0 0 64px rgba(122,47,242,.45);">
+          about me</h2>
+        <p
+          style="max-width: 60ch; margin: 0 auto; font-size: clamp(16px, 1.9vw, 19px); line-height: 1.7; color: #cbb9e6; text-wrap: pretty;">
+          i'm mel, i'm from london ontario in canada. i'm very nerdy about a lot of different topics and fields, with
+          way too many hyperfixations and interests, and a soft spot for life's questions that don't have easy answers.
+          in my free time i play video games with my friends and listen to music, i <em
+            style="font-style: italic;">LOVE</em> music, and i go to concerts. the freelance stuff and the services i
+          offer are a fun side quest. my life's purpose is to pursue a career in the mental health and addictions field
+          / social work, and help others the way i was helped. i also love socializing and meeting new people, i'm a
+          big social butterfly.</p>
+      </div>
+
+      <div
+        style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 18px; margin-top: 46px;">
+
+        <div
+          style="grid-column: 1 / -1; padding: 20px; border-radius: 18px; border: 1px solid rgba(255,92,200,.28); background: linear-gradient(140deg, rgba(28,10,51,.9), rgba(11,4,22,.9)); box-shadow: 0 24px 70px -40px rgba(255,47,176,.7);">
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px;">
+            <div style="min-width: 0;">
+              <div
+                style="font-family: 'Chakra Petch', sans-serif; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: #2fd4ff; margin-bottom: 6px;">
+                ◈ now vibing</div>
+              <div
+                style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: clamp(18px, 2.4vw, 24px); color: #f3e9ff;">
+                CHASE ATLANTIC</div>
+            </div>
+            <div style="display: flex; align-items: flex-end; gap: 4px; height: 40px; flex-shrink: 0;">
+              <div
+                style="width: 5px; height: 100%; border-radius: 3px; transform-origin: bottom; background: linear-gradient(#ff5cc8, #7a2ff2); animation: eqBar 900ms ease-in-out infinite;">
+              </div>
+              <div
+                style="width: 5px; height: 100%; border-radius: 3px; transform-origin: bottom; background: linear-gradient(#ff2fb0, #7a2ff2); animation: eqBar 700ms ease-in-out infinite .15s;">
+              </div>
+              <div
+                style="width: 5px; height: 100%; border-radius: 3px; transform-origin: bottom; background: linear-gradient(#2fd4ff, #7a2ff2); animation: eqBar 1100ms ease-in-out infinite .3s;">
+              </div>
+              <div
+                style="width: 5px; height: 100%; border-radius: 3px; transform-origin: bottom; background: linear-gradient(#ff5cc8, #7a2ff2); animation: eqBar 820ms ease-in-out infinite .45s;">
+              </div>
+              <div
+                style="width: 5px; height: 100%; border-radius: 3px; transform-origin: bottom; background: linear-gradient(#a06bff, #2fd4ff); animation: eqBar 980ms ease-in-out infinite .1s;">
+              </div>
+            </div>
+          </div>
+          <iframe title="Chase Atlantic on Spotify" style="border-radius: 12px; display: block;"
+            src="https://open.spotify.com/embed/track/7kud2YsUIgEO6L41B98Cih?utm_source=generator&si=6c6fa49332f440c8"
+            width="100%" height="152" frameborder="0" allowfullscreen=""
+            allow="encrypted-media; fullscreen; picture-in-picture" referrerpolicy="no-referrer-when-downgrade"
+            loading="lazy"></iframe>
+        </div>
+
+        <div
+          style="position: relative; border-radius: 18px; overflow: hidden; min-height: 240px; border: 1px solid rgba(255,92,200,.35); background-color: #12071f; background-image: repeating-linear-gradient(48deg, #1c0a33 0 12px, #150826 12px 24px);">
+          <img src="assets/mel-chess.webp" alt="mel playing chess in the yard" loading="lazy" decoding="async"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div
+          style="position: relative; border-radius: 18px; overflow: hidden; min-height: 240px; border: 1px solid rgba(160,107,255,.4); background-color: #12071f; background-image: repeating-linear-gradient(-42deg, #1c0a33 0 12px, #150826 12px 24px);">
+          <img src="assets/mel-cat.webp" alt="mel's cat" loading="lazy" decoding="async"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div
+          style="border-radius: 18px; overflow: hidden; min-height: 240px; border: 1px solid rgba(47,212,255,.4); box-shadow: 0 24px 60px -40px rgba(47,212,255,.6);">
+          <iframe title="mel's playlist on Spotify"
+            src="https://open.spotify.com/embed/playlist/3nz2WgYAgjaJPCEc3FGDRQ?utm_source=generator&theme=0"
+            width="100%" height="352" style="border-radius: 18px; display: block; min-height: 240px;" frameborder="0"
+            allowfullscreen="" allow="encrypted-media; fullscreen; picture-in-picture"
+            referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <div aria-hidden="true" style="position: relative; z-index: 5; overflow: hidden; border-top: 1px solid rgba(255,47,176,.25); border-bottom: 1px solid rgba(255,47,176,.25); background: rgba(11,4,22,.7); padding: 11px 0;">
+      <div data-ticker style="display: flex; width: max-content; animation: ticker 28s linear infinite;"><span style="white-space: nowrap; font-family: 'Chakra Petch', sans-serif; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #b9a6d6;">web development<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>game servers<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>gaming communities<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>discord bots<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>online storefronts<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>ai agents<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>ads + social media<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span></span><span style="white-space: nowrap; font-family: 'Chakra Petch', sans-serif; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #b9a6d6;">web development<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>game servers<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>gaming communities<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>discord bots<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>online storefronts<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>ai agents<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span>ads + social media<span style="color: #ff2fb0; margin: 0 20px; text-shadow: 0 0 10px rgba(255,47,176,.8);">&#10022;</span></span></div>
+    </div>
+
+    <!-- ============ SERVICES / PRODUCTS ============ -->
+    <section id="services"
+      style="position: relative; padding: clamp(30px, 6vw, 70px) clamp(18px, 5vw, 72px) clamp(70px, 10vw, 120px); max-width: 1180px; margin: 0 auto;">
+      <div
+        style="width: 100%; text-align: center; padding: clamp(22px, 4vw, 38px) clamp(20px, 4vw, 40px); border-radius: 22px; border: 1px solid rgba(255,47,176,.4); background: linear-gradient(130deg, rgba(28,10,51,.95), rgba(11,4,22,.95)); box-shadow: 0 0 0 1px rgba(122,47,242,.15), 0 30px 90px -50px rgba(255,47,176,.8);">
+        <h2
+          style="display: block; font-family: 'Chakra Petch', sans-serif; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: #ff2fb0; margin: 0; font-size: clamp(15px, 3.6vw, 42px); line-height: 1.05; text-shadow: 0 0 10px rgba(255,47,176,.8), 0 0 30px rgba(255,47,176,.5), 0 0 64px rgba(122,47,242,.45);">services
+          and products i offer</h2>
+      </div>
+
+      <div
+        style="margin-top: 18px; padding: clamp(26px, 4vw, 46px) clamp(22px, 4vw, 48px); border-radius: 22px; border: 1px solid rgba(122,47,242,.35); background: linear-gradient(160deg, rgba(20,6,38,.92), rgba(11,4,22,.94)); box-shadow: 0 0 0 1px rgba(255,47,176,.08), 0 30px 90px -55px rgba(122,47,242,.9);">
+        <p
+          style="font-size: clamp(16px, 1.9vw, 19px); line-height: 1.8; color: #cbb9e6; margin: 0 auto 20px; max-width: 64ch; text-wrap: pretty;">
+          i'm a self taught software and web developer. no
+          degree, no bootcamp, just years of taking things apart, breaking them, and putting them back together until
+          they worked. the freelance stuff grew out of that, and somewhere along the way it turned into the thing
+          people keep asking me for.</p>
+        <p
+          style="font-size: clamp(16px, 1.9vw, 19px); line-height: 1.8; color: #cbb9e6; margin: 0 auto 20px; max-width: 64ch; text-wrap: pretty;">
+          i build websites and apps from the ground up,
+          deploy them, host them, and keep them running so you never have to think about it. i run
+          game servers too, minecraft and most others,
+          modded, plugin'd or plain vanilla, and if you want a whole
+          gaming community around it i'll set that up as
+          well, discord bots included, custom built to run
+          and grow the place while you sleep. want to sell something? i'll launch you an
+          online storefront with a dashboard you can
+          actually understand without a tutorial.</p>
+        <p
+          style="font-size: clamp(16px, 1.9vw, 19px); line-height: 1.8; color: #cbb9e6; margin: 0 auto 20px; max-width: 64ch; text-wrap: pretty;">
+          on the ai side i build custom agents that take the
+          boring parts of your work, school and life off your plate, plus
+          ready made presets if you'd rather plug something
+          in and go. same deal with servers, i keep
+          setup packages ready if plug and play beats custom
+          for you. and if you'd rather hand the noisy part off entirely, i'll run your
+          ads and social media end to end.</p>
+        <p
+          style="font-size: clamp(16px, 1.9vw, 19px); line-height: 1.8; color: #cbb9e6; margin: 0 auto; max-width: 64ch; text-wrap: pretty;">
+          basically, if it lives on the internet there's a good chance i can build it, host it, or fix it. pricing is
+          affordable on purpose, starting as low as $15, and
+          if the thing you want isn't mentioned here, <a href="index.html#contact" data-hover="color: #2fd4ff;">ask me
+            anyway</a>.<span aria-hidden="true" style="display: inline-block; width: 9px; height: 17px; margin-left: 7px; vertical-align: -2px; background: #ff2fb0; box-shadow: 0 0 10px rgba(255,47,176,.8); animation: blink 1.1s steps(1) infinite;"></span></p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact"
+      style="position: relative; padding: clamp(50px, 8vw, 100px) clamp(18px, 5vw, 72px); max-width: 1180px; margin: 0 auto; text-align: center;">
+      <div>
+        <h2
+          style="font-family: 'Chakra Petch', sans-serif; font-weight: 400; letter-spacing: .32em; text-transform: uppercase; color: #ff2fb0; margin: 0 0 22px; font-size: clamp(30px, 6vw, 54px); text-shadow: 0 0 10px rgba(255,47,176,.8), 0 0 30px rgba(255,47,176,.5), 0 0 64px rgba(122,47,242,.45);">
+          contact me</h2>
+        <div id="contact-cards" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+          <button type="button" data-copy="contact@melementi.com"
+            data-hover="transform: translateY(-4px); border-color: #2fd4ff; box-shadow: 0 20px 44px -24px rgba(47,212,255,.7);"
+            style="cursor: pointer; font-family: inherit; color: inherit; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 210px; padding: 18px 24px; border-radius: 14px; border: 1px solid rgba(47,212,255,.45); background: rgba(20,6,38,.6); text-align: left; transition: all .3s ease;">
+            <span
+              style="font-family: 'Chakra Petch', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #2fd4ff;">email</span>
+            <span style="font-size: 19px; font-weight: 600; color: #ffffff;">contact@melementi.com</span>
+            <span data-copy-note="" style="font-size: 14px; color: #cbb9e6;">click to copy</span>
+          </button>
+          <button type="button" data-copy="melementi"
+            data-hover="transform: translateY(-4px); border-color: #a06bff; box-shadow: 0 20px 44px -24px rgba(160,107,255,.7);"
+            style="cursor: pointer; font-family: inherit; color: inherit; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 210px; padding: 18px 24px; border-radius: 14px; border: 1px solid rgba(160,107,255,.5); background: rgba(20,6,38,.6); text-align: left; transition: all .3s ease;">
+            <span
+              style="font-family: 'Chakra Petch', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #a06bff;">discord
+              username</span>
+            <span style="font-size: 19px; font-weight: 600; color: #ffffff;">melementi</span>
+            <span data-copy-note="" style="font-size: 14px; color: #cbb9e6;">click to copy</span>
+          </button>
+          <a href="https://instagram.com/melementi1" target="_blank" rel="noopener"
+            data-hover="transform: translateY(-4px); border-color: #ff2fb0; box-shadow: 0 20px 44px -24px rgba(255,47,176,.7);"
+            style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 210px; padding: 18px 24px; border-radius: 14px; border: 1px solid rgba(255,92,200,.5); background: rgba(20,6,38,.6); text-align: left; transition: all .3s ease;">
+            <span
+              style="font-family: 'Chakra Petch', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #ff5cc8;">instagram</span>
+            <span style="font-size: 19px; font-weight: 600; color: #ffffff;">@melementi1</span>
+            <span style="font-size: 14px; color: #cbb9e6;">click to go to profile</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer
+      style="position: relative; z-index: 5; text-align: center; padding: 36px 24px 54px; border-top: 1px solid rgba(255,47,176,.14); color: #8f7fb0; font-family: 'Chakra Petch', sans-serif; font-size: 12px; letter-spacing: .12em;">
+      <svg aria-label="claude code mascot" role="img" width="44" height="34" viewBox="0 0 52 40" shape-rendering="crispEdges" style="display: block; margin: 0 auto 12px; filter: drop-shadow(0 0 10px rgba(217,119,87,.55));">
+        <g fill="#d97757">
+          <rect x="8" y="0" width="8" height="8"></rect>
+          <rect x="36" y="0" width="8" height="8"></rect>
+          <rect x="0" y="8" width="52" height="24"></rect>
+          <rect x="0" y="32" width="8" height="8"></rect>
+          <rect x="16" y="32" width="8" height="8"></rect>
+          <rect x="28" y="32" width="8" height="8"></rect>
+          <rect x="44" y="32" width="8" height="8"></rect>
+        </g>
+        <rect x="14" y="13" width="4" height="10" fill="#05010a"></rect>
+        <rect x="34" y="13" width="4" height="10" fill="#05010a"></rect>
+      </svg>
+      <div
+        style="font-family: 'Pacifico', cursive; color: #ff5cc8; font-size: 22px; margin-bottom: 8px; text-shadow: 0 0 14px rgba(255,47,176,.6);">
+        melementi</div>
+      <div>built by mel and clawdy&lt;3</div>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // scroll-reveal removed — content is visible on load, nothing to fade in
+      if (reduced) {
+        ['grid-lines', 'stars'].forEach(function (id) { var n = document.getElementById(id); if (n) n.style.animation = 'none'; });
+      }
+
+      // parallax fallback — only for browsers without CSS scroll-driven animations,
+      // which handle it on the compositor via the @supports block in <head>
+      var cssScrollTimeline = window.CSS && CSS.supports && CSS.supports('animation-timeline', 'scroll()');
+      if (!cssScrollTimeline) {
+        var stars = document.getElementById('stars');
+        var sun = document.getElementById('sun');
+        var progress = document.getElementById('scroll-progress');
+        var queued = false, lastY = 0;
+        window.addEventListener('scroll', function () {
+          // read scroll position here, where layout is already clean — reading it inside
+          // the rAF instead would force a synchronous reflow after the previous frame's writes
+          lastY = window.scrollY || 0;
+          if (queued) return;
+          queued = true;
+          requestAnimationFrame(function () {
+            queued = false;
+            if (!reduced) {
+              if (stars) stars.style.transform = 'translateY(' + (lastY * 0.18) + 'px)';
+              if (sun) sun.style.transform = 'translate(-50%, ' + (lastY * 0.09) + 'px)';
+            }
+            if (progress) {
+              var max = document.documentElement.scrollHeight - window.innerHeight;
+              progress.style.transform = 'scaleX(' + (max > 0 ? lastY / max : 0) + ')';
+            }
+          });
+        }, { passive: true });
+      }
+
+      // hover styles (from the design's style-hover)
+      document.querySelectorAll('[data-hover]').forEach(function (el) {
+        var base = el.getAttribute('style') || '';
+        var hov = el.getAttribute('data-hover') || '';
+        el.addEventListener('mouseenter', function () { el.style.cssText = base + ';' + hov; });
+        el.addEventListener('mouseleave', function () { el.style.cssText = base; });
+        el.addEventListener('focus', function () { el.style.cssText = base + ';' + hov; });
+        el.addEventListener('blur', function () { el.style.cssText = base; });
+      });
+
+      // transient message for copy buttons that have no inline note of their own
+      var toast = function (msg, ok) {
+        var t = document.getElementById('copy-toast');
+        if (!t) {
+          t = document.createElement('div');
+          t.id = 'copy-toast';
+          t.setAttribute('role', 'status');
+          document.body.appendChild(t);
+        }
+        t.textContent = msg;
+        t.style.cssText = "position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 100; padding: 10px 18px; border-radius: 10px; font-family: 'Chakra Petch', sans-serif; font-size: 13px; letter-spacing: .1em; background: rgba(20,6,38,.96); border: 1px solid " + (ok ? '#2fd4ff' : '#ff2fb0') + '; color: ' + (ok ? '#2fd4ff' : '#ff8ed8') + '; opacity: 1; transition: opacity .3s ease; pointer-events: none;';
+        clearTimeout(toast._t);
+        toast._t = setTimeout(function () { t.style.opacity = '0'; }, 1400);
+      };
+
+      // click to copy
+      document.querySelectorAll('[data-copy]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          var text = el.getAttribute('data-copy');
+          var note = el.querySelector('[data-copy-note]');
+          // remember the original label once, so rapid clicks can't stick it on "copied!"
+          if (note && note._label == null) note._label = note.textContent;
+          var flash = function (msg, ok) {
+            if (!note) { toast(msg, ok); return; }
+            note.textContent = msg;
+            note.style.color = ok ? '#2fd4ff' : '#ff8ed8';
+            clearTimeout(el._copyT);
+            el._copyT = setTimeout(function () { note.textContent = note._label; note.style.color = '#cbb9e6'; }, 1400);
+          };
+          var done = function () { flash('copied!', true); };
+          var failed = function () { flash('copy failed — ' + text, false); };
+          var legacyCopy = function () {
+            var t = document.createElement('textarea');
+            t.value = text;
+            t.style.cssText = 'position: fixed; top: 0; left: 0; opacity: 0;';
+            document.body.appendChild(t);
+            t.select();
+            var ok = false;
+            try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+            document.body.removeChild(t);
+            return ok;
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done).catch(function () {
+              if (legacyCopy()) done(); else failed();
+            });
+          } else if (legacyCopy()) {
+            done();
+          } else {
+            failed();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
