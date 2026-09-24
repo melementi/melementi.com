@@ -264,8 +264,6 @@
   section, #top { scroll-margin-top: 80px; }
   @media (max-width: 639px) { section, #top { scroll-margin-top: 96px; } }
   .sec-head { margin-bottom: var(--s7); padding-bottom: var(--s5); border-bottom: 1px solid var(--line); }
-  .sec-head .mono { display: block; margin-bottom: var(--s3); }
-  .sec-head .mono::before { content: "$ "; color: var(--text); }
   h2 {
     font-family: var(--display);
     font-weight: 800;
@@ -400,13 +398,10 @@
     background: var(--raised);
   }
   .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 41%; }
-  .portrait .mono { display: flex; justify-content: space-between; gap: var(--s3); margin: var(--s3) 0 0; }
-  .portrait .mono::before { content: none; }
 
   @media (max-width: 899px) and (min-width: 600px) {
     .hero .wrap { grid-template-columns: minmax(0, 1fr) 240px; gap: var(--s6); }
     .portrait { justify-self: end; width: 240px; }
-    .portrait .mono { flex-direction: column; gap: 0; }
   }
   @media (max-width: 599px) {
     .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: var(--s6); }
@@ -455,26 +450,6 @@
     align-items: center;
   }
   .cell-ask a:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .services-foot {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--s4) var(--s6);
-    align-items: center;
-    margin-top: var(--s5);
-    padding: var(--s4) 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .services-foot p { color: var(--muted); font-size: 16px; line-height: 1.55; }
-  .services-foot .price {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--text);
-    white-space: nowrap;
-    border: 1px solid var(--line);
-    padding: 6px 10px;
-    border-radius: var(--r-sm);
-  }
-  .services-foot .price b { font-weight: 500; }
 
   @media (max-width: 899px) {
     .cells { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -482,7 +457,6 @@
   @media (max-width: 599px) {
     .cells { grid-template-columns: minmax(0, 1fr); }
     .cell { min-height: 0; }
-    .services-foot { grid-template-columns: minmax(0, 1fr); }
   }
 
   /* ---------- about ---------- */
@@ -497,9 +471,7 @@
   .about-text { color: var(--muted); font-size: 17px; }
   .about-text .lead { color: var(--text); }
 
-  .log-head { display: flex; justify-content: space-between; padding: var(--s3) 0; border-bottom: 1px solid var(--line); }
-  .log-head b { font-weight: 500; color: var(--text); }
-  .log-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); padding: var(--s4) 0; border-bottom: 1px solid var(--line); }
+  .log-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); padding: 0 0 var(--s4); border-bottom: 1px solid var(--line); }
   .log figure { margin: 0; }
   .log .ph { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); background: var(--raised); }
   .log .ph img { width: 100%; height: 100%; object-fit: cover; }
@@ -514,15 +486,6 @@
   }
   .player-card-track { margin-top: var(--s6); }
   .player-card-list { margin-top: var(--s4); }
-  .player-card-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--s3);
-    margin-bottom: var(--s3);
-  }
-  .player-card-head a { color: var(--muted); transition: color .2s ease; }
-  .player-card-head a:hover { color: var(--text); }
   .spotify-embed { display: block; width: 100%; border: 0; border-radius: var(--r-sm); }
 
   @media (max-width: 899px) {
@@ -564,8 +527,6 @@
   .row .note { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
   .row .note::before { content: "["; color: rgba(156, 147, 179, .55); }
   .row .note::after { content: "]"; color: rgba(156, 147, 179, .55); }
-  .contact-note { display: inline-flex; align-items: center; gap: var(--s2); margin-top: var(--s4); }
-  .contact-note::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 
   @media (max-width: 599px) {
     .row { grid-template-columns: minmax(0, 1fr); gap: var(--s2); }
@@ -621,18 +582,7 @@
     }
     .gutter-sticker[data-slot^="left"]  { left: max(10px, calc((100% - var(--col)) / 2 - 152px)); }
     .gutter-sticker[data-slot^="right"] { right: max(10px, calc((100% - var(--col)) / 2 - 152px)); }
-    .badge {
-      aspect-ratio: 1;
-      border-radius: 50%;
-      border: 1px solid var(--line);
-      background: var(--raised);
-    }
-    .badge svg { width: 100%; height: 100%; display: block; }
-    .badge text { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; fill: var(--muted); }
     .sticker-svg svg { width: 100%; height: auto; display: block; }
-  }
-  @media (min-width: 1200px) and (max-width: 1379px) {
-    .badge text { display: none; }
   }
   @media (min-width: 1380px) {
     .gutter-sticker { width: 128px; }
@@ -693,7 +643,6 @@
         <div class="portrait-frame">
           <img src="assets/mel-hero.webp" alt="mel, standing, looking at the camera" width="700" height="1244" fetchpriority="high" decoding="async">
         </div>
-        <p class="mono"><span>img_0001.webp</span><span>mel, 22, london on</span></p>
       </div>
       <div class="hero-pins">
         <figure class="hero-pin" data-slot="hero-1" style="transform: rotate(-4deg);">
@@ -716,17 +665,8 @@
 
     <!-- about -->
     <section id="about" aria-labelledby="about-h">
-      <div class="gutter-sticker badge" data-slot="right-2" aria-hidden="true" style="top: 18%; transform: rotate(-7deg);">
-        <svg viewBox="0 0 120 120" aria-hidden="true">
-          <defs><path id="ring2" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"></path></defs>
-          <text><textPath href="#ring2">hyperfixation in progress · do not disturb · </textPath></text>
-          <text x="60" y="64" text-anchor="middle" style="font-size:14px;letter-spacing:0;fill:#ECE7F4">&lt;3</text>
-        </svg>
-      </div>
-
       <div class="wrap">
         <div class="sec-head">
-          <span class="mono">cat about.txt</span>
           <h2 id="about-h">about me</h2>
         </div>
 
@@ -739,17 +679,12 @@
             </div>
 
             <div class="player-card player-card-track">
-              <div class="player-card-head mono">
-                <span>now vibing // track</span>
-                <a href="https://open.spotify.com/track/7kud2YsUIgEO6L41B98Cih" target="_blank" rel="noopener">open on spotify &nearr;</a>
-              </div>
               <iframe class="spotify-embed" title="Chase Atlantic on Spotify" src="https://open.spotify.com/embed/track/7kud2YsUIgEO6L41B98Cih?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="encrypted-media; fullscreen; picture-in-picture" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
             </div>
           </div>
 
           <div>
             <div class="log">
-              <div class="log-head mono"><span><b>$</b> tail -n 4 log.txt</span><span>4 entries</span></div>
               <div class="log-grid">
                 <figure>
                   <div class="ph ph-chess">
@@ -775,10 +710,6 @@
             </div>
 
             <div class="player-card player-card-list">
-              <div class="player-card-head mono">
-                <span>playlist // on repeat</span>
-                <a href="https://open.spotify.com/playlist/3nz2WgYAgjaJPCEc3FGDRQ" target="_blank" rel="noopener">open on spotify &nearr;</a>
-              </div>
               <iframe class="spotify-embed" title="mel's playlist on Spotify" src="https://open.spotify.com/embed/playlist/3nz2WgYAgjaJPCEc3FGDRQ?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen allow="encrypted-media; fullscreen; picture-in-picture" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
             </div>
           </div>
@@ -860,11 +791,6 @@
             <a href="#contact">$ ask mel anyway <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
-
-        <div class="services-foot">
-          <p>if it lives on the internet there's a good chance i can build it, host it, or fix it.</p>
-          <span class="price">pricing: affordable on purpose // <b>from $15</b></span>
-        </div>
       </div>
     </section>
 
@@ -872,7 +798,6 @@
     <section id="contact" aria-labelledby="contact-h">
       <div class="wrap">
         <div class="sec-head">
-          <span class="mono">ping mel</span>
           <h2 id="contact-h">contact me</h2>
         </div>
 
@@ -893,8 +818,6 @@
             <span class="note">opens in new tab &nearr;</span>
           </a>
         </div>
-
-        <p class="mono contact-note">status: open for side quests. replies usually same day.</p>
       </div>
     </section>
 
