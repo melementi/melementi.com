@@ -372,14 +372,18 @@
     color: var(--text);
   }
 
+  .hero-pins {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s3);
+    margin: var(--s6) 0 0 var(--s2);
+  }
   .hero-pin {
     width: 156px;
-    margin: var(--s6) 0 0 var(--s2);
     padding: 8px 8px 10px;
     background: var(--raised);
     border: 1px solid var(--line);
     border-radius: var(--r-sm);
-    transform: rotate(-4deg);
   }
   .hero-pin img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 2px; }
   .hero-pin figcaption { margin-top: var(--s2); font-family: var(--mono); font-size: 10px; color: var(--muted); }
@@ -694,10 +698,20 @@
           <span class="idx">README</span>
           <p>self taught. no degree, no bootcamp, just years of taking things apart, breaking them, and putting them back together until they worked.</p>
         </div>
-        <figure class="hero-pin" data-slot="hero-1">
-          <img src="assets/mel-cat.webp" alt="mel's cat" width="820" height="1093" decoding="sync">
-          <figcaption>the cat // 0002</figcaption>
-        </figure>
+        <div class="hero-pins">
+          <figure class="hero-pin" data-slot="hero-1" style="transform: rotate(-4deg);">
+            <img src="assets/mel-cat.webp" alt="mel's cat" width="820" height="1093" decoding="sync">
+            <figcaption>the cat // 0002</figcaption>
+          </figure>
+          <figure class="hero-pin" data-slot="hero-2" style="transform: rotate(3deg);">
+            <img src="assets/mel-cat-2.webp" alt="mel holding the cat" width="820" height="1093" decoding="sync">
+            <figcaption>the cat // 0003</figcaption>
+          </figure>
+          <figure class="hero-pin" data-slot="hero-3" style="transform: rotate(-2deg);">
+            <img src="assets/mel-cat-3.webp" alt="the cat in the litter box, unimpressed" width="820" height="1093" decoding="sync">
+            <figcaption>the cat // 0004</figcaption>
+          </figure>
+        </div>
       </div>
       <div class="portrait">
         <div class="portrait-frame">
