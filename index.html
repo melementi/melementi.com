@@ -384,13 +384,12 @@
   }
   .hero-pin {
     margin: 0;
-    padding: 10px 10px 12px;
+    padding: 10px 10px 24px;
     background: var(--raised);
     border: 1px solid var(--line);
     border-radius: var(--r-sm);
   }
   .hero-pin img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 2px; }
-  .hero-pin figcaption { margin-top: var(--s2); font-family: var(--mono); font-size: 11px; color: var(--muted); }
 
   .portrait { justify-self: end; align-self: start; width: min(100%, 340px); }
   .portrait-frame {
@@ -506,8 +505,6 @@
   .log .ph img { width: 100%; height: 100%; object-fit: cover; }
   .log .ph-chess { aspect-ratio: 820 / 1125; }
   .log .ph-photo { aspect-ratio: 820 / 1093; }
-  .log figcaption { margin-top: var(--s2); font-family: var(--mono); font-size: 12px; color: var(--muted); line-height: 1.5; }
-  .log figcaption b { font-weight: 500; color: var(--text); }
 
   .player-card {
     border: 1px solid var(--line);
@@ -624,15 +621,6 @@
     }
     .gutter-sticker[data-slot^="left"]  { left: max(10px, calc((100% - var(--col)) / 2 - 152px)); }
     .gutter-sticker[data-slot^="right"] { right: max(10px, calc((100% - var(--col)) / 2 - 152px)); }
-    .polaroid {
-      background: var(--raised);
-      border: 1px solid var(--line);
-      padding: 6px 6px 22px;
-      border-radius: var(--r-sm);
-    }
-    .polaroid img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 2px; }
-    .polaroid[data-slot="left-3"] img { object-position: 50% 20%; }
-    .polaroid span { display: none; }
     .badge {
       aspect-ratio: 1;
       border-radius: 50%;
@@ -648,8 +636,6 @@
   }
   @media (min-width: 1380px) {
     .gutter-sticker { width: 128px; }
-    .polaroid { padding: 8px 8px 30px; }
-    .polaroid span { display: block; margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   }
 
   /* ---------- motion ---------- */
@@ -712,19 +698,15 @@
       <div class="hero-pins">
         <figure class="hero-pin" data-slot="hero-1" style="transform: rotate(-4deg);">
           <img src="assets/mel-cat.webp" alt="mel's cat" width="820" height="1093" decoding="sync">
-          <figcaption>the cat // 0002</figcaption>
         </figure>
         <figure class="hero-pin" data-slot="hero-2" style="transform: rotate(3deg);">
           <img src="assets/mel-cat-2.webp" alt="mel holding the cat" width="820" height="1093" decoding="sync">
-          <figcaption>the cat // 0003</figcaption>
         </figure>
         <figure class="hero-pin" data-slot="hero-3" style="transform: rotate(-2deg);">
           <img src="assets/mel-cat-3.webp" alt="the cat in the litter box, unimpressed" width="820" height="1093" decoding="sync">
-          <figcaption>the cat // 0004</figcaption>
         </figure>
         <figure class="hero-pin" data-slot="hero-4" style="transform: rotate(2deg);">
           <img src="assets/mel-cat-4.webp" alt="mel's cat, close up" width="820" height="1093" decoding="sync">
-          <figcaption>the cat // 0005</figcaption>
         </figure>
       </div>
     </div>
@@ -773,25 +755,21 @@
                   <div class="ph ph-chess">
                     <img src="assets/mel-chess.webp" alt="mel playing chess in a yard" width="820" height="1125" decoding="sync">
                   </div>
-                  <figcaption><b>log_01</b> // chess in the yard. lost anyway.</figcaption>
                 </figure>
                 <figure>
                   <div class="ph ph-photo">
                     <img src="assets/mel-hoodie.webp" alt="mel in a red hoodie taking a selfie with a friend under purple lights" width="820" height="1093" decoding="sync">
                   </div>
-                  <figcaption><b>log_02</b> // purple lights, red hoodie. the homie brought the peace sign.</figcaption>
                 </figure>
                 <figure>
                   <div class="ph ph-photo">
                     <img src="assets/mel-basement.webp" alt="mel with long hair in an unfinished basement" width="820" height="1093" decoding="sync">
                   </div>
-                  <figcaption><b>log_03</b> // basement era. hair status: unmanaged.</figcaption>
                 </figure>
                 <figure>
                   <div class="ph ph-photo">
                     <img src="assets/mel-crown.webp" alt="mel wearing a burger king paper crown" width="820" height="1093" decoding="sync">
                   </div>
-                  <figcaption><b>log_04</b> // crowned by burger king. royalty, technically.</figcaption>
                 </figure>
               </div>
             </div>
@@ -892,11 +870,6 @@
 
     <!-- contact -->
     <section id="contact" aria-labelledby="contact-h">
-      <div class="gutter-sticker polaroid" data-slot="left-3" aria-hidden="true" style="top: 22%; transform: rotate(5deg);">
-        <img src="assets/mel-chess.webp" alt="" width="820" height="1125" decoding="sync">
-        <span>the yard // 0003</span>
-      </div>
-
       <div class="wrap">
         <div class="sec-head">
           <span class="mono">ping mel</span>
