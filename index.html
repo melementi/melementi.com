@@ -373,13 +373,16 @@
   }
 
   .hero-pins {
+    grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--s3);
-    margin: var(--s6) 0 0 var(--s2);
+    justify-content: space-between;
+    gap: var(--s5) var(--s3);
+    padding: 0 var(--s2);
   }
   .hero-pin {
     width: 156px;
+    margin: 0;
     padding: 8px 8px 10px;
     background: var(--raised);
     border: 1px solid var(--line);
@@ -698,26 +701,30 @@
           <span class="idx">README</span>
           <p>self taught. no degree, no bootcamp, just years of taking things apart, breaking them, and putting them back together until they worked.</p>
         </div>
-        <div class="hero-pins">
-          <figure class="hero-pin" data-slot="hero-1" style="transform: rotate(-4deg);">
-            <img src="assets/mel-cat.webp" alt="mel's cat" width="820" height="1093" decoding="sync">
-            <figcaption>the cat // 0002</figcaption>
-          </figure>
-          <figure class="hero-pin" data-slot="hero-2" style="transform: rotate(3deg);">
-            <img src="assets/mel-cat-2.webp" alt="mel holding the cat" width="820" height="1093" decoding="sync">
-            <figcaption>the cat // 0003</figcaption>
-          </figure>
-          <figure class="hero-pin" data-slot="hero-3" style="transform: rotate(-2deg);">
-            <img src="assets/mel-cat-3.webp" alt="the cat in the litter box, unimpressed" width="820" height="1093" decoding="sync">
-            <figcaption>the cat // 0004</figcaption>
-          </figure>
-        </div>
       </div>
       <div class="portrait">
         <div class="portrait-frame">
           <img src="assets/mel-hero.webp" alt="mel, standing, looking at the camera" width="700" height="1244" fetchpriority="high" decoding="async">
         </div>
         <p class="mono"><span>img_0001.webp</span><span>mel, 22, london on</span></p>
+      </div>
+      <div class="hero-pins">
+        <figure class="hero-pin" data-slot="hero-1" style="transform: rotate(-4deg);">
+          <img src="assets/mel-cat.webp" alt="mel's cat" width="820" height="1093" decoding="sync">
+          <figcaption>the cat // 0002</figcaption>
+        </figure>
+        <figure class="hero-pin" data-slot="hero-2" style="transform: rotate(3deg);">
+          <img src="assets/mel-cat-2.webp" alt="mel holding the cat" width="820" height="1093" decoding="sync">
+          <figcaption>the cat // 0003</figcaption>
+        </figure>
+        <figure class="hero-pin" data-slot="hero-3" style="transform: rotate(-2deg);">
+          <img src="assets/mel-cat-3.webp" alt="the cat in the litter box, unimpressed" width="820" height="1093" decoding="sync">
+          <figcaption>the cat // 0004</figcaption>
+        </figure>
+        <figure class="hero-pin" data-slot="hero-4" style="transform: rotate(2deg);">
+          <img src="assets/mel-cat-4.webp" alt="mel's cat, close up" width="820" height="1093" decoding="sync">
+          <figcaption>the cat // 0005</figcaption>
+        </figure>
       </div>
     </div>
   </header>
